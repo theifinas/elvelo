@@ -2,15 +2,17 @@
 const routes = [
   {
     path: '/',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [
-      { path: '', component: () => import('pages/Index.vue') }
-    ]
+    component: () => import('components/BoostedHeader'),
   },
 
   {
-    path: '/main',
-    component: () => import('components/BoostedHeader')
+    path: '/shop',
+    component: () => import('components/Shop')
+  },
+
+  {
+    path: '/cart',
+    component: () => import('components/Cart')
   },
 
 

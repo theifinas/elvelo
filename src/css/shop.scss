@@ -1,0 +1,141 @@
+.header-menu2 {
+  position: fixed;
+  display: flex;
+  z-index: 1;
+  justify-content:space-between;
+  align-items: center;
+  height: 66px;
+  width: 100%;
+  background-color: white;
+  opacity: 0.7;
+  box-shadow: 2px 0 10px rgb(41 44 61 / 34%);
+
+  a{
+    text-decoration: none;
+    color: #000000;
+    padding-right: 22px;
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+
+    &:hover {
+      color: #FF4A32;
+      cursor: pointer;
+    }
+  }
+  .header2-icons{
+    padding-right: 21px;
+  }
+}
+
+.title{
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 200px;
+
+  &-line{
+    width: 70px;
+    border: 1px solid #CFCFCF;
+    background-color: #CFCFCF;
+  }
+  &-tekst{
+    font-size: 32px;
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    color: black;
+  }
+  &-subtitle{
+    font-size: 15px;
+    font-family: Roboto,sans-serif;
+    font-weight: 400;
+    color: black;
+    margin-top: 40px;
+  }
+}
+
+.catalog{
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  a{
+    color: #FF4A32;
+    text-decoration: none;
+  }
+  &-first{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+
+    &__title {
+      text-align: center;
+      &-price{
+        color: black;
+      }
+    }
+  }
+
+  &-second{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    &__title {
+      text-align: center;
+      &-price{
+        color: black;
+      }
+    }
+  }
+
+  &-third{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    &__title {
+      text-align: center;
+      &-price{
+        color: black;
+      }
+    }
+  }
+
+  &-fourth{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    &__title {
+      text-align: center;
+      &-price{
+        color: black;
+      }
+    }
+  }
+
+  &-fifth{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    &__title {
+      text-align: center;
+      &-price{
+        color: black;
+      }
+    }
+  }
+}
+
+.catalogItem {
+  border: 2px solid lightcoral;
+  border-radius: 10%;
+height: 300px;
+  width: 230px;
+  &_img {
+    height: 75%;
+    img {
+      width: 230px;
+      height: 75%;
+    }
+  }
+}
