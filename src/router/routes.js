@@ -1,19 +1,32 @@
-
 const routes = [
   {
     path: '/',
-    component: () => import('components/BoostedHeader'),
+    component: () => import('pages/Main'),
+    children: [
+      {
+        path: '',
+        component: () => import('components/Home')
+      },
+      {
+        path: 'catalog',
+        component: () => import('components/Shop')
+      },
+
+      {
+        path: 'catalog/item/:id',
+        component: () => import('components/ProductInfo')
+      },
+      {
+        path: 'product6',
+        component: () => import('components/Product6')
+      },
+      {
+        path: 'cart',
+        component: () => import('components/Cart')
+      }
+    ]
   },
 
-  {
-    path: '/shop',
-    component: () => import('components/Shop')
-  },
-
-  {
-    path: '/cart',
-    component: () => import('components/Cart')
-  },
 
 
   // Always leave this as last one,

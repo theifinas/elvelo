@@ -1,0 +1,47 @@
+.cart{
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 200px;
+}
+
+.denominations{
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  &-product{
+    font-weight: 600;
+    font-size: 25px;
+    font-family: Roboto;
+  }
+  &-price{
+    font-weight: 600;
+    font-size: 25px;
+    font-family: Roboto;
+    padding-left: 400px;
+  }
+  &-quantity{
+    font-weight: 600;
+    font-size: 25px;
+    font-family: Roboto;
+  }
+  &-total{
+    margin-right: 250px;
+    font-weight: 600;
+    font-size: 25px;
+    font-family: Roboto;
+  }
+}
+
+.prod-line{
+  width: 1150px;
+  border: none;
+  background-color: darkgray;
+  height: 1px;
+}
+
+//.subprice{
+//  &-title{
+//
+//  }
+//}
