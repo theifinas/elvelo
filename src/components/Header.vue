@@ -11,24 +11,65 @@
       <router-link to="/product6">
         <a>ELECTRIC SCOOTERS</a>
       </router-link>
-      <router-link to="/gift">
-        <a>GIFT CARD</a>
+      <router-link to="/shipping">
+        <a>SHIPPING</a>
       </router-link>
-      <a href="#">MORE INFO</a>
+      <router-link to="/info">
+        <a href="#">MORE INFO</a>
+
+      </router-link>
     </nav>
     <div class="header-icons">
-      <img src="../assets/avatarIcon.svg" alt="">
+      <!--      <img src="../assets/avatarIcon.svg" alt="">-->
+
+      <div v-if="minBasket" class="countFirst"><span class="countFirst-sp">{{totalCount}}</span></div>
+
       <router-link to="/cart">
-        <img src="../assets/cartIcon.svg" alt="">
+        <img class="cartPic" src="../assets/cartIcon.svg" alt="">
       </router-link>
     </div>
   </div>
 </template>
 
 <script>
-    export default {
-        name: "Header"
-    }
+  import {mapState} from 'vuex'
+
+  export default {
+    name: "Header",
+    data() {
+      return {
+        minBasket: false
+      }
+    },
+    computed: {
+      ...mapState({
+        basketProducts: (state) => state.example.productsInBasket,
+        totalCount() {
+          let total = 0
+          for (let item of this.basketProducts) {
+            total += item.quantity
+          }
+          return total.toFixed(0);
+        },
+
+      })
+    },
+    watch: {
+      totalCount() {
+        if (this.basketProducts.length > 0) {
+          this.minBasket = true
+        } else if (this.basketProducts.length < 1) {
+          this.minBasket = false
+        }
+      }
+    },
+    created() {
+      if (this.basketProducts.length >= 1) {
+        this.minBasket = true
+      }
+
+    },
+  }
 </script>
 
 <style scoped>

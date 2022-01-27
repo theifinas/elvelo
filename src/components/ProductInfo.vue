@@ -44,8 +44,9 @@
       </div>
 
       <div class="all-text__buttons">
-        <button class="all-text__buttons-btn1">Add to cart</button>
-        <button class="all-text__buttons-btn2">Buy it now</button>
+        <router-link to="/catalog">
+          <button class="all-text__buttons-btn1">Back</button>
+        </router-link>
       </div>
 
     </div>

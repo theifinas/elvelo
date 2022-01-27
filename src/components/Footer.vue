@@ -32,7 +32,9 @@
 
   <div class="footer">
     <div class="footer-img">
-      <img src="../assets/boostedLogo2.svg" alt="">
+      <router-link to="/">
+        <img src="../assets/boostedLogo2.svg" alt="">
+      </router-link>
     </div>
 
     <div class="footer-explore">

@@ -1,5 +1,9 @@
 export default function () {
   return {
-    items: []
+    items: [],
+    cart: [],
+    productsInBasket: [],
+    cartCount: 0,
+    memory: []
   }
 }

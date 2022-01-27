@@ -578,3 +578,30 @@
     padding: 0 3px;
   }
 }
+
+.countFirst {
+  border-radius: 50%;
+  background: #000000;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-left: 25px;
+
+  &-sp{
+    font-size: 10px;
+    color: white;
+    text-decoration: none;
+    left: auto;
+    right: auto;
+    top: auto;
+
+  }
+}
+
+.cartPic{
+  width: 35px;
+  height: 35px;
+}

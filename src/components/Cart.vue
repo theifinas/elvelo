@@ -9,13 +9,22 @@
         <p class="denominations-quantity">Quantity</p>
         <p class="denominations-total">Total</p>
       </div>
-      <div class="prod-line"></div>
-      <div v-for="(product,id) in basketProducts" class="cartThe">
+      <!--      <div class="prod-line"></div>-->
+      <div v-for="(product,id) in basketProducts" :key="id" class="cartThe">
         <things :products="product"/>
       </div>
-      <!--        <div class="subprice">-->
-      <!--          <p class="subprice-title">Subtotal:</p>-->
-      <!--        </div>-->
+      <div class="subprice">
+        <div :totalCount="totalCount" class="footerCart_total_count">Subtotal: $ {{total}} </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pay">
+    <button class="pay-btn">Checkout</button>
+    <div class="pay-imgs">
+      <img src="../assets/payCard3.svg" alt="">
+      <img src="../assets/payCard6.svg" alt="">
+      <img src="../assets/payCard8.svg" alt="">
     </div>
   </div>
 </template>

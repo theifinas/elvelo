@@ -1,0 +1,33 @@
+.shipping{
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  margin-left: 200px;
+  width: 70%;
+  &-title{
+    font-size: 32px;
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    color: black;
+  }
+  &-line{
+    width: 70px;
+    border: 1px solid #CFCFCF;
+    background-color: #CFCFCF;
+  }
+  &-canadian{
+    font-size: 18px;
+    font-family: Roboto, sans-serif;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 20px;
+  }
+  &-usa{
+    font-size: 20px;
+    font-family: Roboto, sans-serif;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 20px;
+  }
+
+}

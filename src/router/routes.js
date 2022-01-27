@@ -23,6 +23,14 @@ const routes = [
       {
         path: 'cart',
         component: () => import('components/Cart')
+      },
+      {
+        path: 'shipping',
+        component: () => import('components/Shipping')
+      },
+      {
+        path: 'info',
+        component: () => import('components/Info')
       }
     ]
   },

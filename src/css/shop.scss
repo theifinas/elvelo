@@ -139,6 +139,20 @@
       height: 100%;
     }
   }
+  button{
+    background-color: #000000;
+    border: 1px solid #000000;
+    color: #FFFFFF;
+    width: 120px;
+    border-radius: 5px;
+    margin-top: 10px;
+
+    &:hover{
+      background-color: orange;
+      border: 1px solid orange;
+      color: #FFFFFF;
+    }
+  }
 }
 
 

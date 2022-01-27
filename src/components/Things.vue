@@ -1,39 +1,65 @@
 <template>
   <div class="things">
     <div class="img">
-<!--      <img :src="thingsMas.image" alt="">-->
+      <img class="basketPic" :src="products.image" alt="">
     </div>
     <div class="text">
-      <div class="text-title">
-        <div class="text-title__sub">
-          {{thingsMas.title}}
-        </div>
-        <div class="text-title__price">
-          ${{thingsMas.price}}
-          ${{thingsMas.totalPrice}}
-        </div>
-      </div>
-
-      <div class="text-btns">
-        <div class="text-btns__plusMinus">
-          <button class="text-btns__plusMinus-minus">-</button>
-          <div class="tekst-btns__plusMinus-kolvo">
-<!--            {{thingsMus.quantity}}-->
-          </div>
-          <button class="text-btns__plusMinus-plus">+</button>
-        </div>
-        <div class="text-btns__del">
-          <button @click="del" class="delete">DELETE</button>
-        </div>
-      </div>
+        {{products.title}}
     </div>
+    <div class="price">
+      ${{products.price}}
+    </div>
+    <div class="group">
+      <button @click="reduce" class="group-minus">-</button>
+
+      <div class="group-kolvo">
+        {{products.quantity}}
+      </div>
+      <button @click="countAdd" class="group-plus">+</button>
+    </div>
+    <div class="totalPrice">
+      ${{products.totalPrice}}
+    </div>
+    <div class="">
+      <button @click="deleteProduct" class="delete"></button>
+    </div>
+
+
   </div>
+
 </template>
 
 <script>
-    export default {
-        name: "Things"
+  import {mapMutations} from 'vuex'
+
+  export default {
+    name: "Things",
+    props: {
+      products: {
+        type: Object,
+        default() {
+          return {}
+        }
+      }
+    },
+    methods: {
+      deleteProduct() {
+        this.delProductInBasket(this.products)
+      },
+      countAdd() {
+        this.addCount(this.products)
+      },
+      reduce() {
+        this.reduceI(this.products)
+      },
+
+      ...mapMutations({
+        delProductInBasket: 'example/DELETE_PRODUCT',
+        addCount: 'example/ADD_COUNT',
+        reduceI: 'example/REDUCE',
+      }),
     }
+  }
 </script>
 
 <style scoped>
